@@ -10,6 +10,24 @@ async function fetchContent(language) {
   return response.json();
 }
 
+function getContentLists(data) {
+  return {
+    trips: Array.isArray(data?.trips) ? data.trips : [],
+    transports: Array.isArray(data?.transports) ? data.transports : [],
+  };
+}
+
+function getUiText(root) {
+  return {
+    emptyTrips: root.dataset.emptyTrips || 'Brak danych.',
+    emptyTransports: root.dataset.emptyTransports || 'Brak danych.',
+    loadError: root.dataset.loadError || 'Nie udało się pobrać danych.',
+    sendingLabel: root.dataset.sendingLabel || 'Wysyłanie...',
+    successLabel: root.dataset.successLabel || 'Dziękujemy!',
+    errorLabel: root.dataset.errorLabel || 'Wystąpił błąd.',
+  };
+}
+
 function renderItems(container, items, emptyLabel) {
   container.innerHTML = '';
   if (!items.length) {
@@ -38,18 +56,16 @@ async function init() {
   const language = root.dataset.language || 'pl';
   const tripsNode = document.getElementById('trips-list');
   const transportsNode = document.getElementById('transports-list');
+  const uiText = getUiText(root);
 
   try {
     const data = await fetchContent(language);
-    renderItems(tripsNode, Array.isArray(data.trips) ? data.trips : [], root.dataset.emptyTrips || 'Brak danych.');
-    renderItems(
-      transportsNode,
-      Array.isArray(data.transports) ? data.transports : [],
-      root.dataset.emptyTransports || 'Brak danych.',
-    );
+    const content = getContentLists(data);
+    renderItems(tripsNode, content.trips, uiText.emptyTrips);
+    renderItems(transportsNode, content.transports, uiText.emptyTransports);
   } catch (error) {
-    renderItems(tripsNode, [], root.dataset.loadError || 'Nie udało się pobrać danych.');
-    renderItems(transportsNode, [], root.dataset.loadError || 'Nie udało się pobrać danych.');
+    renderItems(tripsNode, [], uiText.loadError);
+    renderItems(transportsNode, [], uiText.loadError);
   }
 
   const form = document.getElementById('lead-form');
@@ -57,7 +73,7 @@ async function init() {
 
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
-    status.textContent = root.dataset.sendingLabel || 'Wysyłanie...';
+    status.textContent = uiText.sendingLabel;
 
     const payload = {
       name: form.elements.name.value,
@@ -80,12 +96,18 @@ async function init() {
       if (!response.ok) {
         throw new Error(result.error || 'Unknown error');
       }
-      status.textContent = root.dataset.successLabel || 'Dziękujemy!';
+      status.textContent = uiText.successLabel;
       form.reset();
     } catch {
-      status.textContent = root.dataset.errorLabel || 'Wystąpił błąd.';
+      status.textContent = uiText.errorLabel;
     }
   });
 }
 
-init();
+if (typeof document !== 'undefined') {
+  init();
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = { getContentLists, getUiText };
+}

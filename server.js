@@ -35,8 +35,10 @@ async function parseBody(req) {
 
     req.on('data', (chunk) => {
       if (body.length + chunk.length > 1_000_000) {
-        fail(new Error('Payload too large.'));
-        req.pause();
+        const error = new Error('Payload too large.');
+        error.statusCode = 413;
+        fail(error);
+        req.destroy();
         return;
       }
       body += chunk;
@@ -170,7 +172,8 @@ const server = http.createServer(async (req, res) => {
         json(res, 502, { error: 'Cannot send lead to CRM.', details: error.message });
       }
     } catch (error) {
-      json(res, 400, { error: error.message || 'Invalid request payload.' });
+      const statusCode = error.statusCode === 413 ? 413 : 400;
+      json(res, statusCode, { error: error.message || 'Invalid request payload.' });
     }
     return;
   }
