@@ -1,0 +1,774 @@
+{
+  "_meta": {
+    "wersja": 1,
+    "opublikowano": "2026-09-25T21:10:00Z",
+    "przez": "Edytor Treści"
+  },
+  "sekcje": {
+    "start/hero": {
+      "strona": "start",
+      "etykieta": "Hero",
+      "zrodlo": "edytor",
+      "pola": {
+        "kicker": {
+          "pl": "Wyprawy motocyklowe · transport pojazdów · od 2008",
+          "en": null
+        },
+        "title": {
+          "pl": "Po prostu znamy się na dobrych przygodach",
+          "en": null
+        },
+        "lead": {
+          "pl": "Kirgistan, Pamir, Tybet, Pakistan, Patagonia, Afryka, Alaska. Nigdy nie zabierzemy Was w miejsce, w którym nie byliśmy sami. A Wasze motocykle zawieziemy tam, gdzie chcecie jechać.",
+          "en": null
+        },
+        "cta1": {
+          "pl": "Zobacz wyprawy",
+          "en": null
+        },
+        "cta2": {
+          "pl": "Wyślij motocykl",
+          "en": null
+        },
+        "image": "https://advfactory.com/wp-content/uploads/2023/10/20230925_211321-scaled.jpg",
+        "orbit": true
+      }
+    },
+    "start/live": {
+      "strona": "start",
+      "etykieta": "Live z CRM (najbliższa wyprawa, kontener)",
+      "zrodlo": "crm",
+      "modul": "Katalog Wypraw",
+      "klucz": "wyprawy[] · kierunki[]"
+    },
+    "start/manifest": {
+      "strona": "start",
+      "etykieta": "Manifest",
+      "zrodlo": "edytor",
+      "pola": {
+        "kicker": {
+          "pl": "Manifest",
+          "en": null
+        },
+        "text": {
+          "pl": "Nie sprzedajemy wycieczek. Jeździmy tam, gdzie sami chcemy wracać — i bierzemy ze sobą ludzi, którym ufamy na trasie. Każdy kilometr w katalogu przejechaliśmy wcześniej sami.",
+          "en": null
+        }
+      }
+    },
+    "start/stats": {
+      "strona": "start",
+      "etykieta": "Liczby",
+      "zrodlo": "edytor",
+      "pola": {
+        "items": {
+          "pl": "18 | sezonów od 2008\n62 | kraje\n800+ | pojazdów w kontenerach\n1 900 | uczestników",
+          "en": null
+        }
+      }
+    },
+    "start/trips": {
+      "strona": "start",
+      "etykieta": "Najbliższe wyprawy",
+      "zrodlo": "crm",
+      "modul": "Katalog Wypraw",
+      "klucz": "wyprawy[]"
+    },
+    "start/transport": {
+      "strona": "start",
+      "etykieta": "Transport — kierunki",
+      "zrodlo": "crm",
+      "modul": "Terminarz Transportów",
+      "klucz": "kierunki[]"
+    },
+    "start/gallery": {
+      "strona": "start",
+      "etykieta": "Galeria pozioma",
+      "zrodlo": "edytor",
+      "pola": {
+        "kicker": {
+          "pl": "Relacje",
+          "en": null
+        },
+        "title": {
+          "pl": "Byliśmy tam",
+          "en": null
+        },
+        "images": {
+          "pl": "https://advfactory.com/wp-content/uploads/2023/10/20230925_211321-scaled.jpg\nhttps://advfactory.com/wp-content/uploads/2025/06/DSC_3057-Enhanced-NR.jpg\nhttps://advfactory.com/wp-content/uploads/2023/10/DSC_1675.jpg",
+          "en": null
+        }
+      }
+    },
+    "start/cta": {
+      "strona": "start",
+      "etykieta": "Sticky CTA",
+      "zrodlo": "edytor",
+      "pola": {
+        "label": {
+          "pl": "Zapytaj",
+          "en": null
+        },
+        "note": {
+          "pl": "Skrzynka CRM · źródło „www” · 24 h",
+          "en": null
+        }
+      }
+    },
+    "wyprawy/head": {
+      "strona": "wyprawy",
+      "etykieta": "Nagłówek listy",
+      "zrodlo": "edytor",
+      "pola": {
+        "kicker": {
+          "pl": "Katalog · sezon 2026/27",
+          "en": null
+        },
+        "title": {
+          "pl": "Wyprawy",
+          "en": null
+        },
+        "lead": {
+          "pl": "Każda trasa przejechana przez nas wcześniej. Ceny ostateczne, terminy z CRM, wolne miejsca odświeżane przy każdej publikacji.",
+          "en": null
+        }
+      }
+    },
+    "wyprawy/list": {
+      "strona": "wyprawy",
+      "etykieta": "Lista wypraw + filtry",
+      "zrodlo": "crm",
+      "modul": "Katalog Wypraw",
+      "klucz": "wyprawy[]"
+    },
+    "wyprawy/notify": {
+      "strona": "wyprawy",
+      "etykieta": "Boks „Nie widzisz swojego terminu?”",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Nie widzisz swojego terminu?",
+          "en": null
+        },
+        "text": {
+          "pl": "Zostaw e-mail — damy znać, gdy otworzymy nowy sezon. Osobna lista w CRM, nie lejek sprzedażowy.",
+          "en": null
+        },
+        "cta": {
+          "pl": "Powiadom mnie",
+          "en": null
+        },
+        "ok": {
+          "pl": "Zapisane — damy znać o nowym sezonie.",
+          "en": null
+        }
+      }
+    },
+    "wyprawy/card": {
+      "strona": "wyprawy",
+      "etykieta": "Karta wyprawy — stałe bloki",
+      "zrodlo": "edytor",
+      "pola": {
+        "incl": {
+          "pl": "Prowadzenie i pilot na motocyklu\nNoclegi ze śniadaniem\nSamochód techniczny, mechanik\nUbezpieczenie KL / NNW",
+          "en": null
+        },
+        "excl": {
+          "pl": "Przeloty\nPaliwo, wizy, opłaty drogowe\nWyżywienie poza śniadaniem\nWydatki własne",
+          "en": null
+        },
+        "askCta": {
+          "pl": "Zapytaj o miejsce",
+          "en": null
+        },
+        "videoNote": {
+          "pl": "YouTube ładuje się dopiero po zgodzie marketingowej (cookies).",
+          "en": null
+        }
+      }
+    },
+    "wyprawy/archive": {
+      "strona": "wyprawy",
+      "etykieta": "Archiwum",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Archiwum od 2008",
+          "en": null
+        },
+        "stats": {
+          "pl": "18 | sezonów\n140+ | wypraw\n62 | kraje\n1 900 | uczestników",
+          "en": null
+        }
+      }
+    },
+    "transport/hero": {
+      "strona": "transport",
+      "etykieta": "Hero",
+      "zrodlo": "edytor",
+      "pola": {
+        "kicker": {
+          "pl": "Transport pojazdów · 7 kierunków · kontenery zbiorcze",
+          "en": null
+        },
+        "title": {
+          "pl": "Twój motocykl. Tam, gdzie chcesz jechać.",
+          "en": null
+        },
+        "lead": {
+          "pl": "Odbieramy w Łowiczu albo Ciechanowie, pakujemy w skrzynie, płyniemy kontenerem. Ty lecisz i odbierasz gotowy do jazdy motocykl na miejscu.",
+          "en": null
+        },
+        "cta1": {
+          "pl": "Wyceń transport",
+          "en": null
+        },
+        "cta2": {
+          "pl": "Dokumenty i przygotowanie",
+          "en": null
+        },
+        "image": "https://advfactory.com/wp-content/uploads/2025/06/DSC_3057-Enhanced-NR.jpg"
+      }
+    },
+    "transport/steps": {
+      "strona": "transport",
+      "etykieta": "Jak to działa (6 kroków)",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Jak to działa",
+          "en": null
+        },
+        "items": {
+          "pl": "Wycena i termin | Wybierasz kierunek i kontener, potwierdzamy w 24 h.\nDokumenty | Dowód, pełnomocnictwo, karnet jeśli trzeba.\nDostawa do magazynu | Łowicz lub Ciechanów, w tygodniu pakowania.\nPakowanie | Skrzynia, pasy, zdjęcia do panelu.\nFracht | Kontener zbiorczy, status na żywo.\nOdbiór | Agent w porcie, motocykl gotowy do jazdy.",
+          "en": null
+        }
+      }
+    },
+    "transport/routes": {
+      "strona": "transport",
+      "etykieta": "Kierunki i terminy",
+      "zrodlo": "crm",
+      "modul": "Terminarz Transportów",
+      "klucz": "kierunki[]"
+    },
+    "transport/route": {
+      "strona": "transport",
+      "etykieta": "Kierunek — stałe bloki",
+      "zrodlo": "edytor",
+      "pola": {
+        "incl": {
+          "pl": "Odbiór w magazynie Łowicz lub Ciechanów, skrzynia i pakowanie\nFracht morski w kontenerze zbiorczym, opłaty portowe\nOdprawa celna eksportowa i importowa\nUbezpieczenie cargo do 15 000 EUR\nRozpakowanie i wydanie na miejscu",
+          "en": null
+        },
+        "docs": {
+          "pl": "Dowód rejestracyjny + kopia\nPełnomocnictwo do odprawy (wzór wysyłamy)",
+          "en": null
+        },
+        "cta": {
+          "pl": "Zamów transport",
+          "en": null
+        },
+        "note": {
+          "pl": "cena netto, w jedną stronę",
+          "en": null
+        }
+      }
+    },
+    "transport/quote": {
+      "strona": "transport",
+      "etykieta": "Wycena — konfigurator",
+      "zrodlo": "edytor",
+      "pola": {
+        "veh": {
+          "pl": "Motocykl | do 300 kg | 1\nQuad / SxS | do 600 kg | 1.3\nSamochód | osobowy / 4x4 | 2.5\nKamper / van | do 3,5 t | 3.2",
+          "en": null
+        },
+        "extras": {
+          "pl": "Ubezpieczenie cargo do 30 000 € | 120\nBagaż w skrzyni (do 40 kg) | 120\nOdbiór spod domu w PL | 120",
+          "en": null
+        },
+        "disclaimer": {
+          "pl": "Widełki — cena ostateczna zależy od wymiarów skrzyni i kursu frachtu. Potwierdzamy w 24 h.",
+          "en": null
+        },
+        "cta": {
+          "pl": "Poproś o ofertę",
+          "en": null
+        }
+      }
+    },
+    "transport/docs": {
+      "strona": "transport",
+      "etykieta": "Dokumenty i przygotowanie",
+      "zrodlo": "edytor",
+      "pola": {
+        "g1": {
+          "pl": "Dowód rejestracyjny + 2 kopie\nPełnomocnictwo do odprawy (wzór od nas)\nKarnet de Passages — jeśli kraj wymaga\nZielona karta lub ubezpieczenie lokalne",
+          "en": null
+        },
+        "g2": {
+          "pl": "Paliwo maks. ¼ baku\nAkumulator odpięty (klema minus)\nLusterka, szyba, kufry zdjęte\nCiśnienie w oponach obniżone do 1,5 bar",
+          "en": null
+        },
+        "g3": {
+          "pl": "Do 40 kg, w miękkich torbach\nBez płynów, aerozoli, jedzenia\nKask i kombinezon mogą jechać ze skrzynią\nLista rzeczy podpisana i włożona do skrzyni",
+          "en": null
+        },
+        "pdf": {
+          "pl": "/pliki/checklista-pakowania.pdf",
+          "en": null
+        }
+      }
+    },
+    "transport/warehouses": {
+      "strona": "transport",
+      "etykieta": "Magazyny",
+      "zrodlo": "edytor",
+      "pola": {
+        "w1name": {
+          "pl": "Bufamco",
+          "en": null
+        },
+        "w1addr": {
+          "pl": "ul. Małszyce 9, 99-400 Łowicz",
+          "en": null
+        },
+        "w1hours": {
+          "pl": "pn–pt 8:00–16:00 · po umówieniu",
+          "en": null
+        },
+        "w2name": {
+          "pl": "Hala ADV",
+          "en": null
+        },
+        "w2addr": {
+          "pl": "ul. Płocka 4, 06-400 Ciechanów",
+          "en": null
+        },
+        "w2hours": {
+          "pl": "sob 9:00–13:00 · w tygodniu pakowania",
+          "en": null
+        }
+      }
+    },
+    "relacje/head": {
+      "strona": "relacje",
+      "etykieta": "Nagłówek",
+      "zrodlo": "edytor",
+      "pola": {
+        "kicker": {
+          "pl": "Relacje · zdjęcia · wideo · opinie",
+          "en": null
+        },
+        "title": {
+          "pl": "Byliśmy tam",
+          "en": null
+        },
+        "reviewsTitle": {
+          "pl": "Co mówią uczestnicy",
+          "en": null
+        }
+      }
+    },
+    "relacje/posts": {
+      "strona": "relacje",
+      "etykieta": "Relacje z tras · Opinie",
+      "zrodlo": "crm",
+      "modul": "FAQ · Relacje · Opinie",
+      "klucz": "tresci.relacje[] · tresci.opinie[]"
+    },
+    "relacje/reviews": {
+      "strona": "relacje",
+      "etykieta": "Opinie — nagłówek",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Opinie",
+          "en": null
+        },
+        "score": {
+          "pl": "4,9",
+          "en": null
+        },
+        "scoreNote": {
+          "pl": "średnia z 212 ankiet po wyprawach",
+          "en": null
+        }
+      }
+    },
+    "onas/manifest": {
+      "strona": "onas",
+      "etykieta": "Manifest",
+      "zrodlo": "edytor",
+      "pola": {
+        "kicker": {
+          "pl": "Manifest · od 2008",
+          "en": null
+        },
+        "title": {
+          "pl": "Nigdy nie zabierzemy Was w miejsce, w którym nie byliśmy sami.",
+          "en": null
+        }
+      }
+    },
+    "onas/stats": {
+      "strona": "onas",
+      "etykieta": "Liczby",
+      "zrodlo": "edytor",
+      "pola": {
+        "items": {
+          "pl": "18 | sezonów od 2008\n62 | kraje\n800+ | pojazdów w kontenerach\n1 900 | uczestników",
+          "en": null
+        }
+      }
+    },
+    "onas/cols": {
+      "strona": "onas",
+      "etykieta": "Trzy kolumny",
+      "zrodlo": "edytor",
+      "pola": {
+        "h1": {
+          "pl": "Jak jeździmy",
+          "en": null
+        },
+        "p1": {
+          "pl": "Małe grupy, maks. 10 motocykli. Pilot z przodu, samochód techniczny z tyłu. Trasa zawsze przejechana wcześniej przez kogoś z nas.",
+          "en": null
+        },
+        "h2": {
+          "pl": "Jak wozimy",
+          "en": null
+        },
+        "p2": {
+          "pl": "Od 2012 wysyłamy motocykle kontenerami. Własne skrzynie, sprawdzeni agenci w portach, odprawa po naszej stronie. Ponad 800 pojazdów, zero zaginionych.",
+          "en": null
+        },
+        "h3": {
+          "pl": "Kto",
+          "en": null
+        },
+        "p3": {
+          "pl": "Krzysztof Samborski — założyciel, ponad 400 000 km na sześciu kontynentach. Zespół pilotów i mechaników, którzy przejechali z nami każdy kierunek z katalogu.",
+          "en": null
+        }
+      }
+    },
+    "onas/team": {
+      "strona": "onas",
+      "etykieta": "Zespół",
+      "zrodlo": "edytor",
+      "pola": {
+        "items": {
+          "pl": "Krzysztof Samborski | założyciel · pilot |\nMichał G. | pilot · Ameryka Płd. |\nAgnieszka W. | biuro · logistyka |\nPaweł N. | mechanik · samochód techniczny |",
+          "en": null
+        }
+      }
+    },
+    "faq/head": {
+      "strona": "faq",
+      "etykieta": "Nagłówek i zakładki",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "FAQ",
+          "en": null
+        },
+        "tabs": {
+          "pl": "wyprawy | Wyprawy\ntransport | Transport\nplatnosci | Płatności",
+          "en": null
+        },
+        "foot": {
+          "pl": "Nie znalazłeś odpowiedzi? Napisz do nas — odpowiadamy w 24 h.",
+          "en": null
+        }
+      }
+    },
+    "faq/items": {
+      "strona": "faq",
+      "etykieta": "Pytania i odpowiedzi",
+      "zrodlo": "crm",
+      "modul": "FAQ · Relacje · Opinie",
+      "klucz": "tresci.faq[]"
+    },
+    "kontakt/form": {
+      "strona": "kontakt",
+      "etykieta": "Formularz",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Kontakt",
+          "en": null
+        },
+        "kicker": {
+          "pl": "Napisz · odpowiadamy w 24 h",
+          "en": null
+        },
+        "topics": {
+          "pl": "wyprawa | Wyprawa\ntransport | Transport\ninne | Inne",
+          "en": null
+        },
+        "consent": {
+          "pl": "Zgadzam się na kontakt w sprawie zapytania.",
+          "en": null
+        },
+        "cta": {
+          "pl": "Wyślij",
+          "en": null
+        }
+      }
+    },
+    "kontakt/channels": {
+      "strona": "kontakt",
+      "etykieta": "Kanały kontaktu",
+      "zrodlo": "edytor",
+      "pola": {
+        "wa": {
+          "pl": "+48 739 299 980",
+          "en": null
+        },
+        "phone": {
+          "pl": "+48 739 299 980",
+          "en": null
+        },
+        "hours": {
+          "pl": "pn–pt 9:00–17:00",
+          "en": null
+        },
+        "mail": {
+          "pl": "info@advfactory.com",
+          "en": null
+        },
+        "mapNote": {
+          "pl": "Mapa Google ładuje się po zgodzie na cookies marketingowe.",
+          "en": null
+        }
+      }
+    },
+    "kontakt/company": {
+      "strona": "kontakt",
+      "etykieta": "Dane firmy",
+      "zrodlo": "edytor",
+      "pola": {
+        "name": {
+          "pl": "Advfactory.com Krzysztof Samborski",
+          "en": null
+        },
+        "addr": {
+          "pl": "ul. Mazowiecka 11 m. 49, 00-052 Warszawa",
+          "en": null
+        },
+        "nip": {
+          "pl": "6941077972",
+          "en": null
+        },
+        "regon": {
+          "pl": "356526605",
+          "en": null
+        },
+        "iban": {
+          "pl": "PL 12 1090 0000 0000 0000 0000 0000",
+          "en": null
+        }
+      }
+    },
+    "kontakt/thanks": {
+      "strona": "kontakt",
+      "etykieta": "Strona „Dziękujemy”",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Mamy to",
+          "en": null
+        },
+        "text": {
+          "pl": "Zapytanie trafiło do biura. Odpowiadamy w ciągu 24 h — na e-mail, a jeśli podałeś numer, także na WhatsApp.",
+          "en": null
+        },
+        "refLabel": {
+          "pl": "Nr zgłoszenia",
+          "en": null
+        }
+      }
+    },
+    "panel/login": {
+      "strona": "panel",
+      "etykieta": "Logowanie",
+      "zrodlo": "edytor",
+      "pola": {
+        "claim": {
+          "pl": "Twoja wyprawa.\nTwój motocykl.\nJeden panel.",
+          "en": null
+        },
+        "title": {
+          "pl": "Zaloguj się",
+          "en": null
+        },
+        "hint": {
+          "pl": "Panel pokazuje status transportu, płatności i dokumenty z CRM. Tylko odczyt + wątek z biurem.",
+          "en": null
+        },
+        "cta": {
+          "pl": "Wejdź do panelu",
+          "en": null
+        },
+        "noAccess": {
+          "pl": "Konto zakłada biuro po potwierdzeniu rezerwacji. Nie masz dostępu? Napisz.",
+          "en": null
+        },
+        "image": "https://advfactory.com/wp-content/uploads/2023/10/DSC_1675.jpg"
+      }
+    },
+    "panel/statuses": {
+      "strona": "panel",
+      "etykieta": "Statusy transportu (6)",
+      "zrodlo": "edytor",
+      "pola": {
+        "items": {
+          "pl": "Przyjęty\nZapakowany\nW drodze\nW porcie\nOdprawa\nDo odbioru",
+          "en": null
+        }
+      }
+    },
+    "panel/checklist": {
+      "strona": "panel",
+      "etykieta": "Checklista domyślna",
+      "zrodlo": "edytor",
+      "pola": {
+        "items": {
+          "pl": "Paszport ważny min. 6 mies. po powrocie | przy rezerwacji\nPrawo jazdy międzynarodowe | przy rezerwacji\nZaliczka wpłacona | 7 dni\nMotocykl oddany do magazynu | wg terminarza\nPełnomocnictwo podpisane | wg terminarza\nUbezpieczenie KL/NNW | 60 dni przed\nSerwis motocykla przed wysyłką | wg terminarza\nII rata | 60 dni przed\nBilety lotnicze | 30 dni przed\nSzczepienia / apteczka | 14 dni przed\nKarta SIM / eSIM | 3 dni przed\nPakowanie wg listy | 1 dzień przed",
+          "en": null
+        }
+      }
+    },
+    "panel/data": {
+      "strona": "panel",
+      "etykieta": "Dane klienta (transport, płatności, dokumenty, wątek)",
+      "zrodlo": "crm",
+      "modul": "Karta klienta",
+      "klucz": "klienci[] · zlecenia[] · platnosci[]"
+    },
+    "prawne/privacy": {
+      "strona": "prawne",
+      "etykieta": "Polityka prywatności",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Polityka prywatności",
+          "en": null
+        },
+        "body": {
+          "pl": "## Administrator\nAdministratorem danych jest Advfactory.com Krzysztof Samborski, ul. Mazowiecka 11 m. 49, 00-052 Warszawa, NIP 6941077972.\n\n## Jakie dane i po co\nDane z formularzy przetwarzamy w celu odpowiedzi na zapytanie i obsługi rezerwacji. Trafiają do CRM jako zgłoszenie ze źródłem „www”.\n\n## Jak długo\nZapytania bez rezerwacji usuwamy po 24 miesiącach.\n\n## Twoje prawa\nDostęp, sprostowanie, usunięcie, ograniczenie, sprzeciw, przeniesienie.",
+          "en": null
+        }
+      }
+    },
+    "prawne/terms": {
+      "strona": "prawne",
+      "etykieta": "Regulamin",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Regulamin i warunki uczestnictwa",
+          "en": null
+        },
+        "body": {
+          "pl": "## Rezerwacja\nRezerwacja miejsca następuje po wpłacie zaliczki 30 % i potwierdzeniu przez biuro.\n\n## Płatności\nPozostała część ceny płatna na 60 dni przed startem. Transport: 50 % przy przyjęciu, 50 % przed wypłynięciem.\n\n## Rezygnacja\nDo 90 dni przed startem — zwrot pomniejszony o koszty już poniesione. 89–30 dni — 50 %. Poniżej 30 dni — bez zwrotu, z możliwością wskazania zastępcy.\n\n## Odpowiedzialność\nUczestnik prowadzi pojazd na własną odpowiedzialność, posiada ważne prawo jazdy i ubezpieczenie.",
+          "en": null
+        }
+      }
+    },
+    "prawne/cookies": {
+      "strona": "prawne",
+      "etykieta": "Cookies i zgody",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Cookies",
+          "en": null
+        },
+        "c1": {
+          "pl": "Sesja, język, zapamiętanie zgód.",
+          "en": null
+        },
+        "c2": {
+          "pl": "Anonimowe statystyki odwiedzin.",
+          "en": null
+        },
+        "c3": {
+          "pl": "YouTube i Google Maps na stronie.",
+          "en": null
+        },
+        "banner": {
+          "pl": "Używamy cookies niezbędnych do działania strony. Filmy i mapy włączą się po Twojej zgodzie.",
+          "en": null
+        },
+        "accept": {
+          "pl": "Zgadzam się",
+          "en": null
+        },
+        "settings": {
+          "pl": "Ustawienia",
+          "en": null
+        }
+      }
+    },
+    "prawne/404": {
+      "strona": "prawne",
+      "etykieta": "Strona 404",
+      "zrodlo": "edytor",
+      "pola": {
+        "title": {
+          "pl": "Zjechałeś z trasy",
+          "en": null
+        },
+        "text": {
+          "pl": "Tej strony nie ma — albo przenieśliśmy ją do nowego sezonu. Zdarza się na szutrze.",
+          "en": null
+        },
+        "cta1": {
+          "pl": "Na start",
+          "en": null
+        },
+        "cta2": {
+          "pl": "Wyprawy",
+          "en": null
+        }
+      }
+    },
+    "prawne/footer": {
+      "strona": "prawne",
+      "etykieta": "Stopka",
+      "zrodlo": "edytor",
+      "pola": {
+        "about": {
+          "pl": "Wyprawy motocyklowe i transport pojazdów. Od 2008. Nigdy nie zabierzemy Was w miejsce, w którym nie byliśmy sami.",
+          "en": null
+        },
+        "copy": {
+          "pl": "© 2008–2026 Advfactory.com Krzysztof Samborski · Warszawa",
+          "en": null
+        }
+      }
+    },
+    "prawne/nav": {
+      "strona": "prawne",
+      "etykieta": "Nawigacja",
+      "zrodlo": "edytor",
+      "pola": {
+        "desktop": {
+          "pl": "Wyprawy | /wyprawy\nTransport | /transport\nRelacje | /relacje\nO nas | /o-nas\nFAQ | /faq\nKontakt | /kontakt",
+          "en": null
+        },
+        "mobile": {
+          "pl": "Start | / | home\nWyprawy | /wyprawy | mountain\nTransport | /transport | ship\nPanel | /panel | user\nKontakt | /kontakt | message-circle",
+          "en": null
+        },
+        "panelBtn": {
+          "pl": "Panel",
+          "en": null
+        }
+      }
+    }
+  }
+}
