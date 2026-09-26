@@ -69,7 +69,10 @@ async function init() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      const result = await response.json();
+      const contentType = response.headers.get('content-type') || '';
+      const result = contentType.includes('application/json')
+        ? await response.json()
+        : { error: await response.text() };
       if (!response.ok) {
         throw new Error(result.error || 'Unknown error');
       }

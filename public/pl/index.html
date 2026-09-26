@@ -47,10 +47,10 @@
       <section>
         <h2>Formularz leadowy</h2>
         <form id="lead-form">
-          <label>Imię i nazwisko <input name="name" required /></label>
-          <label>E-mail <input name="email" type="email" required /></label>
-          <label>Telefon <input name="phone" /></label>
-          <label>Wiadomość <textarea name="message" rows="4"></textarea></label>
+          <label>Imię i nazwisko <input name="name" type="text" autocomplete="name" required /></label>
+          <label>E-mail <input name="email" type="email" autocomplete="email" required /></label>
+          <label>Telefon <input name="phone" type="tel" autocomplete="tel" /></label>
+          <label>Wiadomość <textarea name="message" rows="4" autocomplete="off"></textarea></label>
           <button type="submit">Wyślij</button>
           <p id="lead-status" class="status" aria-live="polite"></p>
         </form>

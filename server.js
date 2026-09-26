@@ -133,12 +133,15 @@ function resolvePublicFile(requestPath) {
   }
 
   const relativePath = requestPath.replace(/^\/+/, '');
-  const cleanedPath = path.normalize(relativePath);
-  return path.resolve(STATIC_DIR, cleanedPath);
+  const cleanedPath = path
+    .normalize(relativePath)
+    .replace(/^(\.\.(\/|\\|$))+/, '')
+    .replace(/^\/+/, '');
+  return path.join(STATIC_DIR, cleanedPath);
 }
 
 const server = http.createServer(async (req, res) => {
-  const requestUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const requestUrl = new URL(req.url, 'http://localhost');
 
   if (req.method === 'GET' && requestUrl.pathname === '/api/content') {
     try {
