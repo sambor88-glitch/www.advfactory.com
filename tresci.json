@@ -12,23 +12,23 @@
       "pola": {
         "kicker": {
           "pl": "Wyprawy motocyklowe · transport pojazdów · od 2008",
-          "en": null
+          "en": "Motorcycle expeditions · vehicle transport · since 2008"
         },
         "title": {
           "pl": "Po prostu znamy się na dobrych przygodach",
-          "en": null
+          "en": "We simply know good adventures"
         },
         "lead": {
           "pl": "Kirgistan, Pamir, Tybet, Pakistan, Patagonia, Afryka, Alaska. Nigdy nie zabierzemy Was w miejsce, w którym nie byliśmy sami. A Wasze motocykle zawieziemy tam, gdzie chcecie jechać.",
-          "en": null
+          "en": "Kyrgyzstan, Pamir, Tibet, Pakistan, Patagonia, Africa, Alaska. We will never take you somewhere we haven’t been ourselves. And we’ll ship your motorcycle wherever you want to ride."
         },
         "cta1": {
           "pl": "Zobacz wyprawy",
-          "en": null
+          "en": "See expeditions"
         },
         "cta2": {
           "pl": "Wyślij motocykl",
-          "en": null
+          "en": "Ship your motorcycle"
         },
         "image": "https://advfactory.com/wp-content/uploads/2023/10/20230925_211321-scaled.jpg",
         "orbit": true
@@ -48,11 +48,11 @@
       "pola": {
         "kicker": {
           "pl": "Manifest",
-          "en": null
+          "en": "Manifesto"
         },
         "text": {
           "pl": "Nie sprzedajemy wycieczek. Jeździmy tam, gdzie sami chcemy wracać — i bierzemy ze sobą ludzi, którym ufamy na trasie. Każdy kilometr w katalogu przejechaliśmy wcześniej sami.",
-          "en": null
+          "en": "We don’t sell package tours. We ride where we ourselves want to return to — and we bring along people we trust on the road. Every kilometre in our catalogue, we’ve ridden ourselves first."
         }
       }
     },
@@ -63,7 +63,7 @@
       "pola": {
         "items": {
           "pl": "18 | sezonów od 2008\n62 | kraje\n800+ | pojazdów w kontenerach\n1 900 | uczestników",
-          "en": null
+          "en": "18 | seasons since 2008\n62 | countries\n800+ | vehicles shipped\n1,900 | participants"
         }
       }
     },
@@ -419,7 +419,7 @@
       "pola": {
         "items": {
           "pl": "18 | sezonów od 2008\n62 | kraje\n800+ | pojazdów w kontenerach\n1 900 | uczestników",
-          "en": null
+          "en": "18 | seasons since 2008\n62 | countries\n800+ | vehicles shipped\n1,900 | participants"
         }
       }
     },
