@@ -18,7 +18,11 @@ function renderItems(container, items, emptyLabel) {
   for (const item of items) {
     const article = document.createElement('article');
     article.className = 'card';
-    article.innerHTML = `<h3>${item.title || ''}</h3><p>${item.description || ''}</p>`;
+    const heading = document.createElement('h3');
+    heading.textContent = item.title || '';
+    const description = document.createElement('p');
+    description.textContent = item.description || '';
+    article.append(heading, description);
     container.appendChild(article);
   }
 }

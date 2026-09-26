@@ -26,20 +26,31 @@ function json(res, statusCode, payload) {
 async function parseBody(req) {
   return new Promise((resolve, reject) => {
     let body = '';
+    let settled = false;
+    const fail = (error) => {
+      if (settled) return;
+      settled = true;
+      reject(error);
+    };
+
     req.on('data', (chunk) => {
-      body += chunk;
-      if (body.length > 1_000_000) {
-        req.socket.destroy();
+      if (body.length + chunk.length > 1_000_000) {
+        fail(new Error('Payload too large.'));
+        req.pause();
+        return;
       }
+      body += chunk;
     });
     req.on('end', () => {
+      if (settled) return;
       try {
+        settled = true;
         resolve(body ? JSON.parse(body) : {});
       } catch {
-        reject(new Error('Invalid JSON body.'));
+        fail(new Error('Invalid JSON body.'));
       }
     });
-    req.on('error', reject);
+    req.on('error', fail);
   });
 }
 
@@ -149,10 +160,14 @@ const server = http.createServer(async (req, res) => {
         return;
       }
 
-      const crmResult = await sendLeadToCrm(validation.lead);
-      json(res, 200, { ok: true, crmResult });
+      try {
+        const crmResult = await sendLeadToCrm(validation.lead);
+        json(res, 200, { ok: true, crmResult });
+      } catch (error) {
+        json(res, 502, { error: 'Cannot send lead to CRM.', details: error.message });
+      }
     } catch (error) {
-      json(res, 502, { error: 'Cannot send lead to CRM.', details: error.message });
+      json(res, 400, { error: error.message || 'Invalid request payload.' });
     }
     return;
   }
