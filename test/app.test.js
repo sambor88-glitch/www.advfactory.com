@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { getContentLists, getUiText } = require('../public/app');
+const { getContentLists, getUiText, submitLead } = require('../public/app');
 
 test('getContentLists returns arrays for valid and invalid shapes', () => {
   assert.deepEqual(getContentLists({ trips: [{ id: 1 }], transports: [{ id: 2 }] }), {
@@ -41,4 +41,28 @@ test('getUiText uses language-specific dataset labels', () => {
   assert.equal(getUiText(pl).loadError, 'Nie udało się pobrać danych z CRM.');
   assert.equal(getUiText(en).emptyTrips, 'No trips available.');
   assert.equal(getUiText(en).loadError, 'Could not load CRM data.');
+});
+
+test('submitLead returns success for ok JSON response', async () => {
+  const fetchMock = async () => ({
+    ok: true,
+    headers: { get: () => 'application/json' },
+    json: async () => ({ ok: true }),
+    text: async () => '',
+  });
+
+  const result = await submitLead({ name: 'A' }, fetchMock);
+  assert.deepEqual(result, { ok: true, result: { ok: true } });
+});
+
+test('submitLead returns error for non-ok responses', async () => {
+  const fetchMock = async () => ({
+    ok: false,
+    headers: { get: () => 'application/json' },
+    json: async () => ({ error: 'Bad request' }),
+    text: async () => '',
+  });
+
+  const result = await submitLead({ name: 'A' }, fetchMock);
+  assert.deepEqual(result, { ok: false, error: 'Bad request' });
 });

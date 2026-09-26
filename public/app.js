@@ -28,7 +28,26 @@ function getUiText(root) {
   };
 }
 
+async function submitLead(payload, fetchImpl = fetch) {
+  const response = await fetchImpl('/api/leads', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  const contentType = response.headers.get('content-type') || '';
+  const result = contentType.includes('application/json')
+    ? await response.json()
+    : { error: await response.text() };
+
+  if (!response.ok) {
+    return { ok: false, error: result.error || 'Unknown error' };
+  }
+
+  return { ok: true, result };
+}
+
 function renderItems(container, items, emptyLabel) {
+  if (!container) return;
   container.innerHTML = '';
   if (!items.length) {
     const p = document.createElement('p');
@@ -73,6 +92,7 @@ async function init() {
 
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
+    if (!status) return;
     status.textContent = uiText.sendingLabel;
 
     const payload = {
@@ -84,18 +104,8 @@ async function init() {
     };
 
     try {
-      const response = await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      const contentType = response.headers.get('content-type') || '';
-      const result = contentType.includes('application/json')
-        ? await response.json()
-        : { error: await response.text() };
-      if (!response.ok) {
-        throw new Error(result.error || 'Unknown error');
-      }
+      const result = await submitLead(payload);
+      if (!result.ok) throw new Error(result.error);
       status.textContent = uiText.successLabel;
       form.reset();
     } catch {
@@ -109,5 +119,5 @@ if (typeof document !== 'undefined') {
 }
 
 if (typeof module !== 'undefined') {
-  module.exports = { getContentLists, getUiText };
+  module.exports = { getContentLists, getUiText, submitLead };
 }

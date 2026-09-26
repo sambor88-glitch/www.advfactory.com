@@ -112,7 +112,11 @@ async function sendLeadToCrm(lead) {
 function serveFile(res, filePath) {
   fs.readFile(filePath, (err, data) => {
     if (err) {
-      json(res, 404, { error: 'Not found' });
+      if (err.code === 'ENOENT') {
+        json(res, 404, { error: 'Not found' });
+      } else {
+        json(res, 500, { error: 'Cannot read file.' });
+      }
       return;
     }
 
@@ -143,7 +147,13 @@ function resolvePublicFile(requestPath) {
 }
 
 const server = http.createServer(async (req, res) => {
-  const requestUrl = new URL(req.url, 'http://localhost');
+  let requestUrl;
+  try {
+    requestUrl = new URL(req.url, 'http://localhost');
+  } catch {
+    json(res, 400, { error: 'Invalid request URL.' });
+    return;
+  }
 
   if (req.method === 'GET' && requestUrl.pathname === '/api/content') {
     try {
