@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADV Factory - Wyjazdy i transport z CRM</title>
+    <meta
+      name="description"
+      content="Nowa strona ADV Factory: leady do CRM, dane o wyjazdach i transportach pobierane bezpośrednio z CRM."
+    />
+    <link rel="canonical" href="https://www.advfactory.com/pl" />
+    <link rel="alternate" hreflang="pl" href="https://www.advfactory.com/pl" />
+    <link rel="alternate" hreflang="en" href="https://www.advfactory.com/en" />
+    <link rel="alternate" hreflang="x-default" href="https://www.advfactory.com/pl" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="lang-switch" aria-label="Przełącznik języka">
+        <strong>PL</strong>
+        <a href="/en" lang="en">EN</a>
+      </nav>
+      <h1>Nowa strona ADV Factory</h1>
+      <p>Zbieranie leadów i prezentacja ofert wyjazdów oraz transportów z CRM.</p>
+    </header>
+
+    <main
+      id="app"
+      data-language="pl"
+      data-empty-trips="Brak dostępnych wyjazdów."
+      data-empty-transports="Brak dostępnych transportów."
+      data-load-error="Nie udało się pobrać danych z CRM."
+      data-sending-label="Wysyłanie zgłoszenia..."
+      data-success-label="Dziękujemy za kontakt. Odezwiemy się wkrótce."
+      data-error-label="Nie udało się wysłać formularza."
+    >
+      <section>
+        <h2>Wyjazdy</h2>
+        <div id="trips-list" class="card-list"></div>
+      </section>
+
+      <section>
+        <h2>Transporty</h2>
+        <div id="transports-list" class="card-list"></div>
+      </section>
+
+      <section>
+        <h2>Formularz leadowy</h2>
+        <form id="lead-form">
+          <label>Imię i nazwisko <input name="name" required /></label>
+          <label>E-mail <input name="email" type="email" required /></label>
+          <label>Telefon <input name="phone" /></label>
+          <label>Wiadomość <textarea name="message" rows="4"></textarea></label>
+          <button type="submit">Wyślij</button>
+          <p id="lead-status" class="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <small>&copy; ADV Factory</small>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
