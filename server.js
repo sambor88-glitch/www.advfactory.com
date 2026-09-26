@@ -176,12 +176,15 @@ const server = http.createServer(async (req, res) => {
   }
 
   const filePath = resolvePublicFile(requestUrl.pathname);
-  if (!filePath.startsWith(STATIC_DIR)) {
+  const staticRoot = path.resolve(STATIC_DIR);
+  const resolvedFilePath = path.resolve(filePath);
+  const relativeToStatic = path.relative(staticRoot, resolvedFilePath);
+  if (relativeToStatic.startsWith('..') || path.isAbsolute(relativeToStatic)) {
     json(res, 403, { error: 'Forbidden' });
     return;
   }
 
-  serveFile(res, filePath);
+  serveFile(res, resolvedFilePath);
 });
 
 if (require.main === module) {

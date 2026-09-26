@@ -3,6 +3,10 @@ async function fetchContent(language) {
   if (!response.ok) {
     throw new Error('Failed to load content');
   }
+  const contentType = response.headers.get('content-type') || '';
+  if (!contentType.includes('application/json')) {
+    throw new Error('Invalid content format');
+  }
   return response.json();
 }
 

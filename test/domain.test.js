@@ -45,6 +45,7 @@ test('validateLeadPayload handles missing optional fields', () => {
 
 test('normalizeTripsAndTransports ensures array shape', () => {
   assert.deepEqual(normalizeTripsAndTransports({}), { trips: [], transports: [] });
+  assert.deepEqual(normalizeTripsAndTransports({ trips: {}, transports: 'x' }), { trips: [], transports: [] });
   assert.deepEqual(
     normalizeTripsAndTransports({ trips: [{ title: 'Trip 1' }], transports: [{ title: 'Bus' }] }),
     {
